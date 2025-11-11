@@ -98,6 +98,66 @@ function animateSkill(skillEl){
   });
 })();
 
+// Dropdown toggle for Hire Me button
+(function dropdownToggle(){
+  const hireMeBtn = document.getElementById('hireMeBtn');
+  const dropdown = document.querySelector('.dropdown');
+  if (hireMeBtn && dropdown) {
+    hireMeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  }
+})();
+
+
+
+// DARK MODE TOGGLE
+(function darkModeToggle(){
+  const toggleBtn = document.createElement('button');
+  toggleBtn.textContent = '🌙';
+  toggleBtn.className = 'dark-mode-toggle';
+  toggleBtn.setAttribute('aria-label', 'Toggle dark mode');
+  toggleBtn.style.cssText = `
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1300;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  `;
+
+  document.body.appendChild(toggleBtn);
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  });
+})();
+
 // Small helper: mark current nav link active based on filename
 (function highlightNav(){
   const links = document.querySelectorAll('.nav-links a');

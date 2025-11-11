@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dechen — Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="page-home">
@@ -15,8 +16,9 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="profession.html">Projects</a></li>
         <li><a href="swe.html">Skills</a></li>
-        <li><a href="about.html">About</a></li>   
+        <li><a href="about.html">About</a></li>
       </ul>
+
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     </nav>
   </header>
@@ -36,20 +38,50 @@
             <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
         </div>
         <div class="cta">
-          <a href="c:\Users\MY_PC\DechenWangmo_02250349_SDA_Phase4\assignment\profession.html" class="btn btn-primary">Explore Work</a>
-          <a href="c:\Users\MY_PC\DechenWangmo_02250349_SDA_Phase4\assignment\about.html" class="btn btn-outline">Hire Me</a>
-        </div>
-        
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="about.html" class="btn btn-primary">Explore More</a>
+          <div class="dropdown">
+            <button class="btn btn-outline dropdown-toggle" id="hireMeBtn">Hire Me</button>
+            <div class="dropdown-menu" id="hireMeMenu">
+              <a href="swe.html">Skills</a>
+              <a href="profession.html">Projects</a>
+            </div>
+          </div>
         </div>
       </div>
 
           <img src="pc1.png" alt="Description of image">
         </div>
 
+    </section>
+
+    <!-- Image Cards Section -->
+    <section class="image-cards-section">
+      <div class="image-cards">
+        <div class="image-card">
+          <img src="Highschool Logo.jpeg" alt="High School">
+          <h3>High School</h3>
+          <p>Completed high school education, building foundational knowledge in various subjects.</p>
+          <div class="hover-info">
+            <p>This website showcases my journey from high school to college, highlighting my growth in software engineering. The design reflects my learning in web development technologies.</p>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="College logo.jpeg" alt="College">
+          <h3>College</h3>
+          <p>Currently pursuing Software Engineering at College of Science and Technology.</p>
+          <div class="hover-info">
+            <p>Built with HTML, CSS, and JavaScript, this portfolio demonstrates the skills I'm acquiring in my software engineering program, including responsive design and interactive features.</p>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="Middle School logo.jpeg" alt="Middle School">
+          <h3>Middle School</h3>
+          <p>Foundation education that prepared me for higher studies and technical learning.</p>
+          <div class="hover-info">
+            <p>The website's clean layout and user experience design principles stem from my early education foundation, combined with modern web development best practices.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 

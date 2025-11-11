@@ -1,0 +1,12 @@
+- [x] Add CSS for mobile menu toggle (.nav-links.open and .menu-toggle.open styles)
+- [x] Add responsive media queries for about.html sections (hero, profile, skills)
+- [x] Test responsiveness by opening about.html in browser
+- [x] Add additional breakpoints for comprehensive device coverage (1024px, 576px, 360px)
+- [x] Test layout on multiple device sizes using browser dev tools (opened in browser)
+- [x] Implement dark/light mode toggle button with proper theming across all pages
+- [x] Add light mode CSS variables and styles using .light-mode class
+- [x] Add theme toggle button (moon/sun icon) to site header on all pages
+- [x] Add JavaScript for toggle functionality with localStorage persistence
+- [x] Test theme switching on all pages (index.html, about.html, swe.html, profession.html)
+- [x] Restore background colors for header elements using CSS variables
+- [x] Add unique background gradients for each page (home, about, skills, projects) with dark mode variants
